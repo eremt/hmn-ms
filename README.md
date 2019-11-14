@@ -1,6 +1,9 @@
 # hmn-ms
+<p>
 <a href="https://www.npmjs.com/package/hmn-ms"><img src="https://img.shields.io/npm/v/hmn-ms.svg" alt="Version"></a>
 <a href="https://www.npmjs.com/package/hmn-ms"><img src="https://img.shields.io/npm/l/hmn-ms.svg" alt="License"></a>
+</p>
+
 Convert human readable strings to milliseconds.
 
 ## Installation
