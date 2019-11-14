@@ -33,12 +33,31 @@ const units = {
 const reMatches = /(\d*\.?\d*\D+)/g
 const reGroups = /(\d*\.?\d*)(\D+)/
 
-module.exports = function humanToMilliseconds (input) {
+const ERROR_INVALID = 'Invalid format: '
+
+/**
+ * Convert a string to milliseconds
+ * @param {String} input 
+ * @return {Number} 
+ */
+function humanToMilliseconds (input) {
   const matches = input.match(reMatches)
-  return matches.reduce((acc, match) => {
+
+  if (!matches) {
+    throw new Error(ERROR_INVALID + input)
+  }
+
+  return matches.reduce((total, match) => {
     let [ _, amount, unit ] = reGroups.exec(match)
     amount = parseFloat(amount)
     unit = unit.trim().toLowerCase()
-    return acc + (amount * units[unit])
+
+    if (!units[unit]) {
+      throw new Error(ERROR_INVALID + match)
+    }
+
+    return total + (amount * units[unit])
   }, 0)
 }
+
+module.exports = humanToMilliseconds
