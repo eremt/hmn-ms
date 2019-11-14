@@ -28,13 +28,13 @@ ms('34 HOurs110 min 600S')
 ## Documentation
 ### Units
 Find the valid units in the table below.
- Unit | Formats
- ---- | -------
- Second | s, sec, secs, second, seconds
- Minute | m, min, mins, minute, minutes
- Hour | h, hour, hours
- Day | d, day, days
- Year | y, year, years
+Unit | Formats
+--- | ---
+**Second** | s, sec, secs, second, seconds
+**Minute** | m, min, mins, minute, minutes
+**Hour** | h, hour, hours
+**Day** | d, day, days
+
 **Note:** Months aren't supported because of inconsistency (28, 30 or 31 days).
 
 License
