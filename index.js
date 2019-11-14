@@ -29,3 +29,16 @@ const units = {
   year: y,
   years: y
 }
+
+const reMatches = /(\d*\.?\d*\D+)/g
+const reGroups = /(\d*\.?\d*)(\D+)/
+
+module.exports = function humanToMilliseconds (input) {
+  const matches = input.match(reMatches)
+  return matches.reduce((acc, match) => {
+    let [ _, amount, unit ] = reGroups.exec(match)
+    amount = parseFloat(amount)
+    unit = unit.trim()
+    return acc + (amount * units[unit])
+  }, 0)
+}
