@@ -33,7 +33,7 @@ const units = {
 const reMatches = /(\d*\.?\d*\D+)/g
 const reGroups = /(\d*\.?\d*)(\D+)/
 
-const ERROR_INVALID = 'Invalid format: '
+const ERROR_INVALID = 'is not a valid format'
 
 /**
  * Convert a string to milliseconds
@@ -41,20 +41,17 @@ const ERROR_INVALID = 'Invalid format: '
  * @return {Number} 
  */
 function humanToMilliseconds (input) {
-  const matches = input.match(reMatches)
+  if (typeof input !== 'string') throw new Error('Expected argument to be of type string')
 
-  if (!matches) {
-    throw new Error(ERROR_INVALID + input)
-  }
+  const matches = input.match(reMatches)
+  if (!matches) throw new Error(`${input} ${ERROR_INVALID}`)
 
   return matches.reduce((total, match) => {
     let [ _, amount, unit ] = reGroups.exec(match)
     amount = parseFloat(amount)
     unit = unit.trim().toLowerCase()
 
-    if (!units[unit]) {
-      throw new Error(ERROR_INVALID + match)
-    }
+    if (!amount || !units[unit]) throw new Error(`${match} ${ERROR_INVALID}`)
 
     return total + (amount * units[unit])
   }, 0)
