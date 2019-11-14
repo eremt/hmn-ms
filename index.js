@@ -6,26 +6,26 @@ const y = 365.25 * d
 
 const units = {
   s,
-  sec,
-  secs,
-  second,
-  seconds,
+  sec: s,
+  secs: s,
+  second: s,
+  seconds: s,
 
   m,
-  min,
-  mins,
-  minute,
-  minutes,
+  min: m,
+  mins: m,
+  minute: m,
+  minutes: m,
 
   h,
-  hour,
-  hours,
+  hour: h,
+  hours: h,
 
   d,
-  day,
-  days,
+  day: d,
+  days: d,
 
   y,
-  year,
-  years
+  year: y,
+  years: y
 }
