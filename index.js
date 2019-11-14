@@ -38,7 +38,7 @@ module.exports = function humanToMilliseconds (input) {
   return matches.reduce((acc, match) => {
     let [ _, amount, unit ] = reGroups.exec(match)
     amount = parseFloat(amount)
-    unit = unit.trim()
+    unit = unit.trim().toLowerCase()
     return acc + (amount * units[unit])
   }, 0)
 }
