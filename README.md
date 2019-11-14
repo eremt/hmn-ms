@@ -1,5 +1,7 @@
 # hmn-ms
-hmn-ms converts human readable strings to milliseconds.
+<a href="https://www.npmjs.com/package/hmn-ms"><img src="https://img.shields.io/npm/v/hmn-ms.svg" alt="Version"></a>
+<a href="https://www.npmjs.com/package/hmn-ms"><img src="https://img.shields.io/npm/l/hmn-ms.svg" alt="License"></a>
+Convert human readable strings to milliseconds.
 
 ## Installation
 ```sh
@@ -35,6 +37,7 @@ Unit | Formats
 **Minute** | m, min, mins, minute, minutes
 **Hour** | h, hour, hours
 **Day** | d, day, days
+**Year** | y, year, years
 
 **Note:** Months aren't supported because of inconsistency (28, 30 or 31 days).
 
