@@ -1,6 +1,6 @@
 {
   "name": "hmn-ms",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Convert human readable strings to milliseconds.",
   "main": "index.js",
   "scripts": {
