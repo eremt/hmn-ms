@@ -40,6 +40,7 @@ Unit | Formats
 **Minute** | m, min, mins, minute, minutes
 **Hour** | h, hour, hours
 **Day** | d, day, days
+**Week** | w, week, weeks
 **Year** | y, year, years
 
 **Note:** Months aren't supported because of inconsistency (28, 30 or 31 days).

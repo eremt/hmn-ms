@@ -2,6 +2,7 @@ const s = 1000
 const m = 60 * s
 const h = 60 * m
 const d = 24 * h
+const w = 7 * d
 const y = 365.25 * d
 
 const units = {
@@ -24,6 +25,10 @@ const units = {
   d,
   day: d,
   days: d,
+
+  w,
+  week: w,
+  weeks: w,
 
   y,
   year: y,
