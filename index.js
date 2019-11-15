@@ -35,7 +35,7 @@ const units = {
   years: y
 }
 
-const reMatches = /(\d*\.?\d*\D+)/g
+const reMatches = /\d*\.\d+\D+|\d+\.\d*\D+|\d+\D+/g
 const reGroups = /(\d*\.?\d*)(\D+)/
 
 const ERROR_INVALID = 'is not a valid format'
