@@ -45,7 +45,7 @@ const ERROR_INVALID = 'is not a valid format'
  * @param {String} input 
  * @return {Number} 
  */
-function humanToMilliseconds (input) {
+export default function humanToMilliseconds (input) {
   if (typeof input !== 'string') throw new Error('Expected argument to be of type string')
 
   const matches = input.match(reMatches)
@@ -61,5 +61,3 @@ function humanToMilliseconds (input) {
     return total + (amount * units[unit])
   }, 0)
 }
-
-module.exports = humanToMilliseconds
