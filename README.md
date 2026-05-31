@@ -8,20 +8,14 @@ Convert human readable strings to milliseconds.
 
 ## Installation
 ```sh
-$ npm install --save hmn-ms
-```
-NodeJS
-```js
-const ms = require('hmn-ms')
-```
-Webpack
-```js
-import ms from 'hmn-ms'
+npm install --save hmn-ms
 ```
 
 ## Usage
 The formatting is flexible as long as the units are valid. It ignores white-space and is case-insensitive. The following examples are equal.
 ```js
+import ms from 'hmn-ms'
+
 ms('1.5 days')
 // -> 86400000
 ms('1d 12h')
@@ -41,6 +35,7 @@ Unit | Formats
 **Hour** | h, hour, hours
 **Day** | d, day, days
 **Week** | w, week, weeks
+**Month** | -
 **Year** | y, year, years
 
 **Note:** Months aren't supported because of inconsistency (28, 30 or 31 days).
